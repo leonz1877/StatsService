@@ -10,8 +10,8 @@ public class StatsService {
         return amount;
     }
 
-    public int avgMonth(int[] salesPerMonth) {
-        int avg = amountAllMonth(salesPerMonth) / salesPerMonth.length;
+    public double avgMonth(int[] salesPerMonth) {
+        double avg = amountAllMonth(salesPerMonth) / salesPerMonth.length;
         return avg;
     }
 

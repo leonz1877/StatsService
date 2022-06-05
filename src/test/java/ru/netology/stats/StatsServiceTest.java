@@ -20,9 +20,9 @@ public class StatsServiceTest {
     @Test
     public void testAvgMonth() {
         StatsService avg = new StatsService();
-        int actual;
+        double actual;
         actual = avg.avgMonth(salesPerMonth);
-        int expected = 15;
+        double expected = 15;
         Assertions.assertEquals(expected, actual);
     }
 
