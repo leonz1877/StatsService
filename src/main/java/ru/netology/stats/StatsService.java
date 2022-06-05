@@ -24,7 +24,6 @@ public class StatsService {
             }
             month = month + 1;
         }
-
         return max + 1;
     }
 
@@ -39,10 +38,10 @@ public class StatsService {
     }
 
     public int sumMonthBelowAvg(int[] salesPerMonth) {
-
+        double avg = avgMonth(salesPerMonth);
         int sumBellow = 0;
         for (int m : salesPerMonth) {
-            if (m < avgMonth(salesPerMonth)) {
+            if (m < avg) {
                 sumBellow++;
             }
         }
@@ -50,10 +49,10 @@ public class StatsService {
     }
 
     public int sumMonthAboveAvg(int[] salesPerMonth) {
-
+        double avg = avgMonth(salesPerMonth);
         int sumAbove = 0;
         for (int m : salesPerMonth) {
-            if (m > avgMonth(salesPerMonth)) {
+            if (m > avg) {
                 sumAbove++;
             }
         }
